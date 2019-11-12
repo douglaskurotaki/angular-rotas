@@ -11,12 +11,22 @@
       </li>
 
       <li routerLinkActive="active">
-        <a routerLink="/login" routerLinkActive="active">
+        <a routerLink="/login">
           Login
+        </a>
+      </li>
+
+      <li routerLinkActive="active">
+        <a [routerLink]="['curso', idCurso.value]">
+          Curso com id
         </a>
       </li>
     </ul>
   </div>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="container">
+  <p>Entre com o id do curso</p>
+  <input #idCurso>
+  <router-outlet></router-outlet>
+</div>

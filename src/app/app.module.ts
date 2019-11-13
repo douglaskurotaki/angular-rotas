@@ -1,3 +1,4 @@
+import { AlunosModule } from "./alunos/alunos.module";
 import { CursosModule } from "./cursos/cursos.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -15,7 +16,8 @@ import { AppRoutingModule } from "./app.routing.module";
     MaterializeModule,
     AppRoutingModule,
     CursosModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlunosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,8 +17,8 @@ export class CursosService {
       if (curso.id == id) {
         return curso;
       }
-      return null;
     }
+    return null;
   }
 
   constructor() {}

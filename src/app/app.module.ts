@@ -1,4 +1,4 @@
-import { routing } from "./app.routing";
+//import { routing } from "./app.routing";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { MaterializeModule } from "angular2-materialize";
@@ -9,7 +9,8 @@ import { LoginComponent } from "./login/login.component";
 import { CursosComponent } from "./cursos/cursos.component";
 import { CursoDetalheComponent } from "./curso-detalhe/curso-detalhe.component";
 import { CursosService } from "./cursos/cursos.service";
-import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
+import { CursoNaoEncontradoComponent } from "./curso-nao-encontrado/curso-nao-encontrado.component";
+import { AppRoutingModule } from "./app.routing.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
     CursoDetalheComponent,
     CursoNaoEncontradoComponent
   ],
-  imports: [BrowserModule, MaterializeModule, routing],
+  imports: [BrowserModule, MaterializeModule, AppRoutingModule],
   providers: [CursosService],
   bootstrap: [AppComponent]
 })

@@ -1,18 +1,19 @@
-<nav>
+<nav *ngIf="mostrarMenu">
   <div class="nav-wrapper" routerLinkActive="active">
     <a href="#" class="brand-logo right" routerLink="/home">Logo
     </a>
 
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li routerLinkActive="active">
-        <a routerLink="/cursos" [queryParams]="{pagina:1}">
-          Cursos
-        </a>
-      </li>
 
       <li routerLinkActive="active">
         <a routerLink="/login">
           Login
+        </a>
+      </li>
+
+      <li routerLinkActive="active">
+        <a routerLink="/cursos" [queryParams]="{pagina:1}">
+          Cursos
         </a>
       </li>
 

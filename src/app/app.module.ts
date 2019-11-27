@@ -10,7 +10,7 @@ import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { AppRoutingModule } from "./app.routing.module";
-import { AuthGuard } from "./guards/auth.guard.service";
+import { AuthGuard } from "./guards/auth.guard";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent],

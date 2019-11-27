@@ -10,12 +10,14 @@ const appRoutes: Routes = [
     path: "cursos",
     loadChildren: "src/app/cursos/cursos.module#CursosModule",
     canActivate: [AuthGuard],
-    canActivateChild: [CursosGuard]
+    canActivateChild: [CursosGuard],
+    canLoad: [AuthGuard]
   },
   {
     path: "alunos",
     loadChildren: "src/app/alunos/alunos.module#AlunosModule",
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
     //canActivateChild: [AlunosGuard]
   },
   {
@@ -32,7 +34,7 @@ const appRoutes: Routes = [
 ];
 
 import { NgModule } from "@angular/core";
-import { AuthGuard } from "./guards/auth.guard.service";
+import { AuthGuard } from "./guards/auth.guard";
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
